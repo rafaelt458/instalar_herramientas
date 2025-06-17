@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16.9-bullseye
+    container_name: postgresql_db_16.9
+    restart: always
+
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: laboratorio
+
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+    ports:
+      - "5433:5432"
+
+    shm_size: 128mb
+
+volumes:
+  db_data:
