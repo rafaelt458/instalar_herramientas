@@ -1,0 +1,12 @@
+services:
+  pgvector:
+    image: 'pgvector/pgvector:pg17-trixie'
+    container_name: 'pgvector17'
+    environment:
+      - 'POSTGRES_DB=laboratorio'
+      - 'POSTGRES_USER=labrafa'
+      - 'POSTGRES_PASSWORD=1234'
+    labels:
+      - "org.springframework.boot.service-connection=postgres"
+    ports:
+      - '5442:5432'
