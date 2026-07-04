@@ -1,0 +1,643 @@
+{
+  "info": {
+    "_postman_id": "eb03a21a-ef44-45ed-832f-600fc7fee153",
+    "name": "Supabase Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28928531"
+  },
+  "item": [
+    {
+      "name": "Autenticación",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"rafaelt458@yahoo.es\",\r\n    \"password\": \"Rt_123456_es\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/auth/v1/signup",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"rafaelt458@yahoo.es\",\r\n    \"password\": \"Rt_123456_es\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/auth/v1/token?grant_type=password",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "token"
+              ],
+              "query": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjdhNTUzOGQzLTEwOTMtNGQyNC04MDY0LWRhNDE1Yzk2OGIxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3p1aHV6bGtmZnNvbHRna2l2ZXF3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmMzhjMzIyNy1lM2UzLTQzZmEtOGE5ZS0zOTMwNTE2MTRiY2UiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc1MjE1MTc1LCJpYXQiOjE3NzUyMTE1NzUsImVtYWlsIjoicmFmYWVsdDQ1OEB5YWhvby5lcyIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJyYWZhZWx0NDU4QHlhaG9vLmVzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiZjM4YzMyMjctZTNlMy00M2ZhLThhOWUtMzkzMDUxNjE0YmNlIn0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzUyMTE1NzV9XSwic2Vzc2lvbl9pZCI6ImFmYWMzYmQ4LTQxZGMtNDYxYy1iMDczLTU0ZjE4OTk0ZGFkNSIsImlzX2Fub255bW91cyI6ZmFsc2V9.zMnH8xurzMP4TfZQenqWmRHUgI_84mzgB7IbfQGMwA4i_z5GmO6ml7mo8ENQnq-E7O5fsrl8RuVNZCWk29fL_A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/auth/v1/logout",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh token",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"refresh_token\": \"xij7nza26zbn\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/auth/v1/token?grant_type=refresh_token",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "auth",
+                "v1",
+                "token"
+              ],
+              "query": [
+                {
+                  "key": "grant_type",
+                  "value": "refresh_token"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Manejo tablas",
+      "item": [
+        {
+          "name": "Insertar en tabla personas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjdhNTUzOGQzLTEwOTMtNGQyNC04MDY0LWRhNDE1Yzk2OGIxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3p1aHV6bGtmZnNvbHRna2l2ZXF3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmMzhjMzIyNy1lM2UzLTQzZmEtOGE5ZS0zOTMwNTE2MTRiY2UiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc1MjE1NTM2LCJpYXQiOjE3NzUyMTE5MzYsImVtYWlsIjoicmFmYWVsdDQ1OEB5YWhvby5lcyIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJyYWZhZWx0NDU4QHlhaG9vLmVzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiZjM4YzMyMjctZTNlMy00M2ZhLThhOWUtMzkzMDUxNjE0YmNlIn0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzUyMTE5MDl9XSwic2Vzc2lvbl9pZCI6IjdkMzJmOGZiLWRiMTItNDlmYy1hNWViLTMzMDk1ZTc3YjRhNCIsImlzX2Fub255bW91cyI6ZmFsc2V9.1iK1t89Usr4ID4mz-bbVedM08b6QEhzLxUjzaigaIZZ72urr50s_KWDYhDdO5ULkG0Hk9drjU5hVNRrZvKFw_A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              },
+              {
+                "key": "Prefer",
+                "value": "return=representation",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombres\": \"Carmen\",\r\n    \"apellidos\": \"Suárez\",\r\n    \"fecha_nacimiento\": \"1997-11-11\",\r\n    \"lugar_nacimiento\": \"Cáceres\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/rest/v1/personas",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "rest",
+                "v1",
+                "personas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modificar en tabla todos",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              },
+              {
+                "key": "Prefer",
+                "value": "return=representation",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombres\": \"Alicia\",\r\n    \"apellidos\": \"Araujo\",\r\n    \"fecha_nacimiento\": \"1996-05-17\",\r\n    \"lugar_nacimiento\": \"Mérida\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/rest/v1/personas?id=eq.7",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "rest",
+                "v1",
+                "personas"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar en la tabla todos",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjdhNTUzOGQzLTEwOTMtNGQyNC04MDY0LWRhNDE1Yzk2OGIxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3p1aHV6bGtmZnNvbHRna2l2ZXF3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmMzhjMzIyNy1lM2UzLTQzZmEtOGE5ZS0zOTMwNTE2MTRiY2UiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc1MjE1NTM2LCJpYXQiOjE3NzUyMTE5MzYsImVtYWlsIjoicmFmYWVsdDQ1OEB5YWhvby5lcyIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJyYWZhZWx0NDU4QHlhaG9vLmVzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiZjM4YzMyMjctZTNlMy00M2ZhLThhOWUtMzkzMDUxNjE0YmNlIn0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzUyMTE5MDl9XSwic2Vzc2lvbl9pZCI6IjdkMzJmOGZiLWRiMTItNDlmYy1hNWViLTMzMDk1ZTc3YjRhNCIsImlzX2Fub255bW91cyI6ZmFsc2V9.1iK1t89Usr4ID4mz-bbVedM08b6QEhzLxUjzaigaIZZ72urr50s_KWDYhDdO5ULkG0Hk9drjU5hVNRrZvKFw_A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              },
+              {
+                "key": "Prefer",
+                "value": "return=representation",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/rest/v1/personas?id=eq.10",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "rest",
+                "v1",
+                "personas"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq.10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Consultar tabla personas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjdhNTUzOGQzLTEwOTMtNGQyNC04MDY0LWRhNDE1Yzk2OGIxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3p1aHV6bGtmZnNvbHRna2l2ZXF3LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmMzhjMzIyNy1lM2UzLTQzZmEtOGE5ZS0zOTMwNTE2MTRiY2UiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc1MjE1NTM2LCJpYXQiOjE3NzUyMTE5MzYsImVtYWlsIjoicmFmYWVsdDQ1OEB5YWhvby5lcyIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJyYWZhZWx0NDU4QHlhaG9vLmVzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiZjM4YzMyMjctZTNlMy00M2ZhLThhOWUtMzkzMDUxNjE0YmNlIn0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NzUyMTE5MDl9XSwic2Vzc2lvbl9pZCI6IjdkMzJmOGZiLWRiMTItNDlmYy1hNWViLTMzMDk1ZTc3YjRhNCIsImlzX2Fub255bW91cyI6ZmFsc2V9.1iK1t89Usr4ID4mz-bbVedM08b6QEhzLxUjzaigaIZZ72urr50s_KWDYhDdO5ULkG0Hk9drjU5hVNRrZvKFw_A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMDg0NTAsImV4cCI6MjA5MDc4NDQ1MH0.zlqObVkgCCHZPRbGQGNc_J2iRl9LKGf-HS4kNQMLbZQ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/rest/v1/personas",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "rest",
+                "v1",
+                "personas"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bucket",
+      "item": [
+        {
+          "name": "Crear bucket",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"imagenes\",\r\n    \"public\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/storage/v1/bucket",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "storage",
+                "v1",
+                "bucket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Subir imagen",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "file",
+              "file": {
+                "src": "/C:/Users/rafa/Pictures/Java-logo.png"
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/storage/v1/object/imagenes/imagen1.jpg",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "storage",
+                "v1",
+                "object",
+                "imagenes",
+                "imagen1.jpg"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar imagen",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"prefixes\": [\r\n        \"imagen1.jpg\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/storage/v1/object/imagenes",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "storage",
+                "v1",
+                "object",
+                "imagenes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Descargar imagen",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/storage/v1/object/imagenes/imagen1.jpg",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "storage",
+                "v1",
+                "object",
+                "imagenes",
+                "imagen1.jpg"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar bucket",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1aHV6bGtmZnNvbHRna2l2ZXF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTIwODQ1MCwiZXhwIjoyMDkwNzg0NDUwfQ.N2UK_lfIOsy8O2ay0rjGq_-FjJAUXNFVcQ823Jhuk5k",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"prefix\": \"\",\r\n    \"limit\": 100,\r\n    \"offset\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://zuhuzlkffsoltgkiveqw.supabase.co/storage/v1/object/list/imagenes",
+              "protocol": "https",
+              "host": [
+                "zuhuzlkffsoltgkiveqw",
+                "supabase",
+                "co"
+              ],
+              "path": [
+                "storage",
+                "v1",
+                "object",
+                "list",
+                "imagenes"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
